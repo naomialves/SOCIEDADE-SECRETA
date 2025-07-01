@@ -9,12 +9,26 @@ import authRoutes from "./auth.js";
 import morgan from "morgan";
 import rateLimit from "express-rate-limit";
 import timeout from "connect-timeout";
+import path from "path";
+import { fileURLToPath } from "url";
 
 dotenv.config();
 
 const { Pool } = pg;
 
 const app = express();
+
+// Necessário para usar __dirname em ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Servir arquivos estáticos da pasta 'pages'
+app.use(express.static(path.join(__dirname, "../pages")));
+
+// Rota para servir a página inicial
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../pages/paginainicial.html"));
+});
 
 // CORS restrito (ajuste para seu domínio real em produção)
 app.use(cors({
