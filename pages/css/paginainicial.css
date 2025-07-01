@@ -1,0 +1,92 @@
+/* Copiado de login.css para padronização visual */
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cabin' , sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../img/image.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    width: 420px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: rgb(245, 242, 242);
+    padding: 30px 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.container h1{
+    font-size: 30px;
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.button, a.button {
+    width: 100%;
+    height: 54px;
+    padding: 0 32px;
+    background: linear-gradient(90deg, #4f8cff 0%, #235390 100%);
+    border: none;
+    border-radius: 32px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Cabin', sans-serif;
+    box-shadow: 0 4px 18px 0 rgba(79, 140, 255, 0.15);
+    transition: 
+        background 0.3s,
+        color 0.3s,
+        box-shadow 0.3s,
+        transform 0.2s;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button:hover, a.button:hover, .button:focus, a.button:focus {
+    background: linear-gradient(90deg, #235390 0%, #4f8cff 100%);
+    color: #fff;
+    box-shadow: 0 8px 24px 0 rgba(79, 140, 255, 0.25);
+    transform: translateY(-2px) scale(1.03);
+    outline: none;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 98vw;
+        min-width: unset;
+        padding: 16px 4vw;
+    }
+    .box {
+        min-width: unset;
+        width: 98vw;
+        padding: 16px 4vw;
+    }
+    .button, a.button {
+        font-size: 16px;
+        height: 44px;
+        padding: 0 10px;
+    }
+}

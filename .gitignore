@@ -1,0 +1,10 @@
+.env
+node_modules/
+*.log
+dist/
+build/
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/meu-backend/.env

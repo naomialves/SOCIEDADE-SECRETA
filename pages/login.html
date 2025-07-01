@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de login da Sociedade Secreta">
+    <meta name="author" content="Naomi">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/login.css"> 
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <title>Login | Sociedade Secreta</title>
+</head>
+<body>
+    <main class="container" aria-label="Área principal">
+        <form id="loginForm" autocomplete="off">
+            <h1>Login Sociedade Secreta</h1>
+            <h2>Complete as informações e seja bem-vindo!</h2>
+            <div class="input-box">
+                <label for="usuario">Usuário</label>
+                <input id="usuario" name="usuario" placeholder="Usuário" type="text" required aria-label="Usuário" aria-describedby="mensagem">
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <label for="senha">Senha</label>
+                <input id="senha" name="senha" placeholder="Senha" type="password" required minlength="6" aria-label="Senha" aria-describedby="mensagem">
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <button type="submit" class="login" aria-label="Entrar">Login</button>
+            <div class="register-link">
+                <p>Não tem uma conta? <a href="register.html">Registre-se</a></p>
+            </div>
+            <div id="mensagem" aria-live="polite" style="text-align:center; margin-bottom:10px; color:#ffb300; font-weight:bold;"></div>
+        </form>
+    </main>
+    <script src="js/login.js"></script>
+</body>
+</html>

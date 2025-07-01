@@ -1,0 +1,207 @@
+/* Visual aprimorado para cadastro */
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url(../img/image.png) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 440px;
+    background: rgba(0, 0, 0, 0.55);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    border-radius: 16px;
+    color: #f5f2f2;
+    padding: 36px 42px 28px 42px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+    margin: 24px;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+}
+
+.container h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.container h2 {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 18px;
+    font-weight: 400;
+    color: #b3c6ff;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    margin: 18px 0;
+}
+
+.input-box label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 4px;
+    color: #e3e3e3;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+
+.input-box input,
+.input-box select {
+    width: 100%;
+    height: 48px;
+    background: rgba(255,255,255,0.08);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    outline: none;
+    font-size: 16px;
+    color: #faf8f8;
+    padding: 0 44px 0 16px;
+    border-radius: 6px;
+    transition: border 0.2s, background 0.2s;
+    margin-top: 2px;
+}
+
+.input-box input:focus,
+.input-box select:focus {
+    border: 2px solid #4f8cff;
+    background: rgba(255,255,255,0.13);
+}
+
+.input-box input::placeholder {
+    color: #e0e0e0;
+    opacity: 0.85;
+}
+
+.input-box i,
+.input-box .bx {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #b3c6ff;
+    pointer-events: none;
+    line-height: 1;
+    width: 32px;
+    z-index: 2;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+button[type="submit"], .login, a.login {
+    width: 100%;
+    height: 54px;
+    padding: 0 32px;
+    background: linear-gradient(90deg, #4f8cff 0%, #235390 100%);
+    border: none;
+    border-radius: 32px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Cabin', sans-serif;
+    box-shadow: 0 4px 18px 0 rgba(79, 140, 255, 0.15);
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+    letter-spacing: 0.5px;
+    margin-top: 18px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button[type="submit"]:hover, .login:hover, button[type="submit"]:focus, .login:focus, a.login:hover, a.login:focus {
+    background: linear-gradient(90deg, #235390 0%, #4f8cff 100%);
+    color: #fff;
+    box-shadow: 0 8px 24px 0 rgba(79, 140, 255, 0.25);
+    transform: translateY(-2px) scale(1.03);
+    outline: none;
+}
+
+.register-link {
+    font-size: 15px;
+    text-align: center;
+    margin: 24px 0 10px;
+}
+
+.register-link a {
+    text-decoration: none;
+    color: #b3c6ff;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.register-link a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+#mensagem {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ffb300;
+    min-height: 22px;
+    letter-spacing: 0.2px;
+}
+#mensagem.sucesso {
+    color: #00e676 !important;
+}
+#mensagem.erro {
+    color: #ff5252 !important;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 98vw;
+        min-width: unset;
+        padding: 16px 4vw;
+    }
+    .input-box input, .input-box select {
+        height: 44px;
+        font-size: 15px;
+    }
+    button[type="submit"], .login, a.button {
+        font-size: 16px;
+        height: 44px;
+        padding: 0 10px;
+    }
+}
+    .input-box input, .input-box select {
+        height: 44px;
+        font-size: 15px;
+    }
+    button[type="submit"], .login, a.button {
+        font-size: 16px;
+        height: 44px;
+        padding: 0 10px;
+    }
+
